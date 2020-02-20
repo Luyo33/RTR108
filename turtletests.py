@@ -32,5 +32,6 @@ def fstar(s, n, t):
         
 
 t = Turtle()
+t.speed(10)
 
 fstar(300, 4, t)
