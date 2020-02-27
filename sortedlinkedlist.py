@@ -14,7 +14,7 @@ class Sortedlinkedlist:
     def add(self,x):
         while(self.nextL):
             self = self.nextL
-        n = Sortedlinkedlist(x, None, false)
+        n = Sortedlinkedlist(x, None, False)
         self.nextL = n
 
     def count(self):
@@ -26,14 +26,17 @@ class Sortedlinkedlist:
 
     def tostring(self):
         s = "[ "
+        self = self.nextL
         while self.nextL:
             s += str(self.e)
-            s += "; -]--->[ "
+            s += "; --]--->[ "
             self = self.nextL
         s += str(self.e)
         s += "; X]"
         return s
 
 L = Sortedlinkedlist(10)
+L.add(5)
+L.add(6)
 
 print(L.tostring(), '\n', L.count())
